@@ -5,7 +5,7 @@ cd "$(dirname "$0")";
 # Export env vars
 export $(grep -v '^#' .env | xargs)
 
-wget -q --spider http://google.com
+wget --no-proxy -q --spider http://google.com
 
 if [ $? -eq 0 ]; then
     # Connected to Internet, so do nothing
